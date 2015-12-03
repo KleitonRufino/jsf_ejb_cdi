@@ -1,0 +1,12 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+	<h:form>
+		<h:panelGrid>
+			<h:commandLink action="#{authenticatorMB.logout}">logout</h:commandLink>
+			<h:outputLink value="#{request.contextPath}/projects.xhtml">Projects</h:outputLink>
+			<h:outputLink value="#{request.contextPath}/bugs.xhtml">Bugs</h:outputLink>
+		</h:panelGrid>
+	</h:form>
+</ui:composition>

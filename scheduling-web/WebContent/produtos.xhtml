@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+	<title>Produtos</title>
+</h:head>
+<h:body>
+	<h1>Produto Destaque</h1>
+	<h:outputLabel value="Nome: " />
+	<h:outputText value="#{produtoMB.produtoDestaque.nome}" />
+	<h:outputLabel value="Preço: " />
+	<h:outputText value="#{produtoMB.produtoDestaque.preco}" />
+
+	<br />
+	<h1>Novo Produto</h1>
+	<h:form>
+		<h:outputLabel value="Nome: " />
+		<h:inputText value="#{produtoMB.produto.nome}" />
+		<h:outputLabel value="Preço: " />
+		<h:inputText value="#{produtoMB.produto.preco}" />
+		<h:commandButton action="#{produtoMB.adiciona}" value="Salvar" />
+	</h:form>
+	<h1>Lista de Produtos</h1>
+	<h:dataTable value="#{produtoMB.produtos}" var="produto">
+		<h:column>
+			<h:outputText value="#{produto.nome}" />
+		</h:column>
+		<h:column>
+			<h:outputText value="#{produto.preco}" />
+		</h:column>
+	</h:dataTable>
+</h:body>
+
+</html>
